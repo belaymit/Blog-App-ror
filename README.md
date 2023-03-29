@@ -65,8 +65,9 @@
 
 ### Key Features <a name="key-features"></a>
 
+- Database Models
+- Database Schema
 
-- **Database Models**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -233,9 +234,12 @@ To run tests, run the following command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
+## FUTURE FEATURES
 
-- [ ] **Full Blog App**
+- Full Blog App
+- Delete Blogs
+- Update Blogs
+- Like and comment on Blogs
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
