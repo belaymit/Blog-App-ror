@@ -1,0 +1,18 @@
+<div>
+  <h1 class="font-bold text-4xl">BlogUser</h1>
+  <h1>Articles</h1>
+
+<ul>
+  <% @users.each do |user| %>
+    <li>
+      <%= user.name %>
+    </li>
+    <li>
+      <%= user.bio %>
+    </li>
+    <li>
+      <%= user.postcount %>
+    </li>
+  <% end %>
+</ul>
+</div>
