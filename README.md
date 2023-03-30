@@ -42,6 +42,8 @@
 > - Use Ruby Gems as a software packages system.
 > - Understand what ORM is.
 > - Use database migration files to maintain database schema.
+> - Set up associations between models.
+> - Write SQL queries with Active Record.
 
 ## 🛠 Built With <a name="built-with"></a>
 
