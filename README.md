@@ -44,6 +44,8 @@
 > - Use database migration files to maintain database schema.
 > - Set up associations between models.
 > - Write SQL queries with Active Record.
+> - Use validations for models.
+> - Write unit tests for models.
 
 ## 🛠 Built With <a name="built-with"></a>
 
