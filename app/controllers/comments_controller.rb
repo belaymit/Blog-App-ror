@@ -3,7 +3,6 @@ class CommentsController < ApplicationController
     @user = User.find(params[:user_id])
     @post = Post.find(params[:post_id])
     @comment = Comment.new(comment_params)
-    @comment.author = current_user
     @comment.post = @post
 
     if @comment.save
@@ -14,11 +13,7 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @comment = Comment.find(params[:id]).destroy
-
-    respond_to do |format|
-      format.html { redirect_to user_posts_path(current_user), notice: 'Comment removed' }
-    end
+  #  to do
   end
 
   private
