@@ -1,16 +1,18 @@
 class PostsController < ApplicationController
-  before_action :find_posts only: [:show]
   def index
     @user = User.find(params[:user_id])
   end
 
   def show
+    @user = User.find(params[:user_id])
+    @post = Post.find(params[:id])
     @comments = @post.comments
   end
 
   def new
     @post = Post.new
   end
+
   def create
     @post = Post.new(post_params)
     @post.author = current_user
@@ -19,15 +21,16 @@ class PostsController < ApplicationController
       flash[:success] = 'Post created successfully'
       redirect_to user_posts_path(current_user)
     else
-      flash[:error] = 'Post not created'
+      flash[:error] = 'The was an error while creating post'
       render :new
     end
   end
+
   def destroy
     @post = Post.find(params[:id]).destroy
 
     respond_to do |format|
-      format.html { redirect_to user_path(current_user), notice: 'Post successfully destroyed.' }
+      format.html { redirect_to user_path(current_user), notice: 'Post destroyed successfully!' }
     end
   end
 
@@ -35,10 +38,5 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :text)
-  end
-
-  def find_posts
-    @user = User.find(params[:user_id])
-    @post = Post.find(params[:id])
   end
 end
