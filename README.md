@@ -46,6 +46,9 @@
 > - Write SQL queries with Active Record.
 > - Use validations for models.
 > - Write unit tests for models.
+> - Use controllers to handle requests and render empty views.
+> - Understand Rails naming conventions.
+> - Use params from browser requests in a safe way.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -218,7 +221,7 @@ To run the project, execute the following command:
 To run tests, run the following command:
 
 ```sh
-  # To do
+  rspec spec/models // to test models
 ```
 
 
