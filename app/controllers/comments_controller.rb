@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-  #  to do
+    #  to do
   end
 
   private
