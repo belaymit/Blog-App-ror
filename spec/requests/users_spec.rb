@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe 'Users', type: :request do
   before(:each) do
     @user = User.create(name: 'Belay', photo: 'https://i.imgur.com/1JZ1Q2r.jpg', bio: 'This is my biography',
-      posts_counter: 2)
-    end
-   describe 'GET #index' do
+                        posts_counter: 2)
+  end
+  describe 'GET #index' do
     before(:each) { get users_path(@user) }
 
     it 'Should be success' do
