@@ -93,8 +93,8 @@ To get a local copy up and running, follow these steps.
 
 ### 1. Install Rails
  - But before you install Rails, you should check to make sure that your system has the proper prerequisites installed. These include:
- > - Ruby
- > - SQLite3
+  - Ruby
+  - SQLite3
 ### In order to install ruby:
 #### Select your platform
  - MacOS
@@ -222,6 +222,7 @@ To run tests, run the following command:
 
 ```sh
   rspec spec/models // to test models
+  rspec spec/requests/controller_name_spec.rb // to test controllers
 ```
 
 
