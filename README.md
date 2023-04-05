@@ -74,7 +74,7 @@
 
 - Database Models
 - Database Schema
-
+- Blog App
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
