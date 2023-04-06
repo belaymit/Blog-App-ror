@@ -1,7 +1,10 @@
 <div>
-<h1 class="flex justify-center p-5">User Posts</h1>
+  <h1 class="flex justify-center p-5">User Posts</h1>
   <%= render 'shared/root'%>
   <%= render 'users/profile', user: @user%>
   <%= render 'users/user_bio'%>
-  <%= render 'posts/posts'%>
+  <%= render 'posts/single_post'%>
+  <div class="flex justify-between">
+    <%= render 'users/all_posts'%>
+  </div>
 </div>
