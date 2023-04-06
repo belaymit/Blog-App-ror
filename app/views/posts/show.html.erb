@@ -1,3 +1,16 @@
-<div class="container">
-  <h2>Posts</h2>
+<div >
+<h1 class="p-5">Description of a post</h1>
+  <%= render 'shared/root'%>
+  <div class="flex flex-col">
+    <div class= "flex flex-col border mt-5 mb-5 p-5">
+      <div class="flex justify-between">
+        <h3 class="text-lg font-medium"><%=@post.title%> #<%=@post.id%> by <%=@post.author.name%></h3>
+        <span class="text-sm items-end mt-8">Comments: <%=@post.comments_counter%> Likes: <%=@post.likes_counter%></span>
+        <%= render 'likes/form'%>
+      </div>
+      <p class="text-sm items-end mt-8"><%=@post.text%></p>
+    </div>
+
+    <%= render 'comments/form'%>
+  </div>
 </div>
