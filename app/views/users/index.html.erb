@@ -1,13 +1,4 @@
 <div class="container">
   <h1>All Users</h1>
-  <ul>
-    <% @users.each do |user| %>
-      <li>
-        <%= user.name %>
-      </li>
-      <li>
-        <%= user.bio %>
-      </li>
-    <% end %>
-  </ul>
+  <%= render 'shared/posts', user: @users%>
 </div>

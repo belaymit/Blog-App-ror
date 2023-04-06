@@ -5,17 +5,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-  <body>
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <%= link_to "Blog App", root_path, class: "navbar-brand" %>
-        </div>
-      </div>
-    </nav>
-    <%= yield %>
+  <body class="bg-slate-300 container flex mx-auto justify-center mt-6 px-5">
+    <main class="w-full">
+      <%= yield %>
+    </main>
   </body>
 </html>
