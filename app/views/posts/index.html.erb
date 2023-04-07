@@ -10,15 +10,23 @@
         <%end%>
         <p class="mt-2 mb-2"><%=post.text%></p>
         <span>💬 <%=post.comments_counter%> 👍 <%=post.likes_counter%>
-        </span>
-    </div>
-  </div>
-  <div class="border pl-3 mb-5">
-    <%post.recent_five_comments.each do |comment|%>
-      <div class="flex justify-between mt-2 mb-2">
-        <p><%=comment.author.name%>: <%=comment.text%></p>
+          <%= link_to "🗑", user_post_path(@user, post), 
+          data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, 
+          class: "bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-2 rounded" 
+          %>
+          </span>
       </div>
-    <%end%>
-  </div>
-<%end%>
+    </div>
+    <div class="border pl-3 mb-5">
+      <%post.recent_five_comments.each do |comment|%>
+        <div class="flex justify-between mt-2 mb-2">
+          <p><%=comment.author.name%>: <%=comment.text%></p>
+          <%= link_to "🗑", user_post_comment_path(@user, post, comment),
+          data: { turbo_method: :delete, turbo_confirm: "Are you  sure?"},
+          class: "bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-2 rounded" 
+          %>
+        </div>
+      <%end%>
+    </div>
+  <%end%>
 </div>
