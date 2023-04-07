@@ -20,7 +20,7 @@ class CommentsController < ApplicationController
       format.html { redirect_to user_posts_path(current_user), notice: 'Comment successfully destroyed.' }
     end
   end
-  
+
   private
 
   def comment_params
