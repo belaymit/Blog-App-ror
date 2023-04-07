@@ -10,6 +10,30 @@ class PostsController < ApplicationController
   end
 
   def new
-    # create new post
+    @post = Post.new
+  end
+
+  def create
+    @post = Post.new(post_params)
+    @post.author = current_user
+
+    if @post.save
+      redirect_to user_posts_path(current_user)
+    else
+      render :new
+    end
+  end
+
+  def destroy
+    @post = Post.find(params[:id]).destroy
+    respond_to do |format|
+      format.html { redirect_to user_path(current_user), notice: 'Post destroyed successfully' }
+    end
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :text)
   end
 end

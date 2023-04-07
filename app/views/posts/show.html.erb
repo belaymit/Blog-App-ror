@@ -1,5 +1,5 @@
 <div >
-<h1 class="p-5">Description of a post</h1>
+  <h1 class="p-5">Post descriptions</h1>
   <%= render 'shared/root'%>
   <div class="flex flex-col">
     <div class= "flex flex-col border mt-5 mb-5 p-5">
@@ -10,7 +10,17 @@
       </div>
       <p class="text-sm items-end mt-8"><%=@post.text%></p>
     </div>
-
+    <div class="border pl-3 mb-5">
+      <%@comments.includes(:author).each do |comment|%>
+        <div class="flex justify-between mt-2 mb-2">
+          <p><%=comment.author.name%>: <%=comment.text%></p>
+          <%= link_to "🗑", user_post_comment_path(comment.author, @post, comment),
+          data: { turbo_method: :delete, turbo_confirm: "Are you  sure?"},
+          class: "bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-2 rounded" 
+          %>
+        </div>
+      <%end%>
+    </div>
     <%= render 'comments/form'%>
   </div>
 </div>
