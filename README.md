@@ -51,6 +51,8 @@
 > - Use params from browser requests in a safe way.
 > - Use preprocessed HTML file with embedded Ruby code.
 > - Use layouts and templates for shared content.
+> - Use preprocessed HTML file with embedded Ruby code.
+> - Use layouts and templates for shared content.
 
 ## 🛠 Built With <a name="built-with"></a>
 
