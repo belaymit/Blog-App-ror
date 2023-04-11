@@ -1,6 +1,6 @@
 require 'rails_helper'
-RSpec.describe 'Post index page', type: :feature do
-  describe 'Post index view' do
+RSpec.describe 'User index page', type: :feature do
+  describe 'User index view' do
     before(:each) do
       @user = User.create(name: 'Belay', photo: 'https://avatars.githubusercontent.com/u/27350247?v=4',
                           bio: 'I am engineer', posts_counter: 2)
