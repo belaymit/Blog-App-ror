@@ -53,6 +53,8 @@
 > - Use layouts and templates for shared content.
 > - Use preprocessed HTML file with embedded Ruby code.
 > - Use layouts and templates for shared content.
+> - Write integration tests with Capybara gem.
+> - Secure app from n+1 problems.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -227,6 +229,7 @@ To run tests, run the following command:
 ```sh
   rspec spec/models // to test models
   rspec spec/requests/controller_name_spec.rb // to test controllers
+  rspec spec/views/user // to test views
 ```
 
 
