@@ -46,7 +46,7 @@ gem 'bootsnap', require: false
 # add tailwind-css
 gem 'tailwindcss-rails', '~> 2.0'
 # Use Sass to process CSS
-gem 'sassc-rails', '>= 2.1.0'
+# gem 'sassc-rails', '>= 2.1.0'
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
