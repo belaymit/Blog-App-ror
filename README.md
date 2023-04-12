@@ -16,7 +16,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -243,6 +242,11 @@ To run tests, run the following command:
 - Twitter: [@twitterhandle](https://twitter.com/2belamit)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/belay-bgwa/)
 
+👤 **Victor Gonzalez**
+
+- GitHub: [@Vgonma](https://github.com/Vgonma)
+- Twitter: [@Victor_GonMa](https://twitter.com/Victor_GonMa)
+- LinkedIn: [Victor Manuel Gonzalez Massimi](https://www.linkedin.com/in/victor-gonzalez-massimi/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
