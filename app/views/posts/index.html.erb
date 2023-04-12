@@ -12,7 +12,7 @@
         <span>💬 <%=post.comments_counter%> 👍 <%=post.likes_counter%>
           <%= link_to "🗑", user_post_path(@user, post), 
           data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, 
-          class: "bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-2 rounded" 
+          class: "bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-1 rounded" 
           %>
           </span>
       </div>
