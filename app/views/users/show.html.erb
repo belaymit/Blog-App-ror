@@ -6,6 +6,8 @@
   <%= render 'posts/single_post'%>
   <div class="flex justify-between">
     <%= render 'users/all_posts'%>
-    <%= render 'users/create_post'%>
+    <%if current_user.id === @user.id%>
+      <%= render 'users/create_post'%>
+    <% end %>
   </div>
 </div>
