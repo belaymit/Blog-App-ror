@@ -2,6 +2,16 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+    user ||= User.new
+
+    if user.admin?
+      can :manage, :all
+    else
+      can :read, :all
+      can :manage, Post, author_id: user.id
+      can :manage, Comment, author_id: user.id
+
+    end
     # Define abilities for the user here. For example:
     #
     #   return unless user.present?
@@ -26,12 +36,5 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/blob/develop/docs/define_check_abilities.md
-    if user.admin?
-      can :manage, :all
-    else
-      can :read, :all
-      can :manage, Post, author_id: user_id
-      can :manage, Comment, author_id: user_id
-    end
   end
 end
