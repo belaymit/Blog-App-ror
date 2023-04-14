@@ -71,6 +71,6 @@ end
 
 # gem 'tailwindcss-rails', '~> 2.0'
 
-gem 'devise'
-
 gem 'cancancan'
+gem 'devise'
+gem 'jwt'
